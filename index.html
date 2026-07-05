@@ -1,0 +1,196 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Feed - FriendLoop</title>
+</head>
+
+<body>
+  <header class="header">
+
+    <h1>FriendLoop</h1>
+    <p>A place to connect, share updates, and explore what your friends are doing.</p>
+
+    <form action="#" method="GET" class="search">
+      <label for="search">Search:</label>
+      <input type="search" id="search" name="search" placeholder="Search for friends, posts, or topics">
+      <button type="submit">Search</button>
+    </form>
+
+    <nav aria-label="main navigation" class="navigation-links">
+      <a href="index.html">Home</a>
+      <a href="profile.html">Profile</a>
+      <a href="explore.html">Explore</a>
+      <a href="auth.html">Logout</a>
+    </nav>
+
+  </header>
+
+  <main>
+    <aside class="sidebar">
+
+      <img src="images/aleem.jpg" alt="Profile Picture" class="profile-picture" width="200">
+      <h2>Welcome, Aleem Ghafoor!</h2>
+
+      <div class="bio">
+        <h3>Bio:</h3>
+        <p>I am a software developer passionate about creating innovative web applications.</p>
+      </div>
+
+      <div class="stats">
+        <h3>Quick Stats</h3>
+        <p>Posts: 15</p>
+        <p>Followers: 128</p>
+        <p>Following: 42</p>
+      </div>
+
+      <nav aria-label="profile shortcut">
+        <a href="profile.html">View Profile</a>
+      </nav>
+    </aside>
+
+    <section class="feed">
+      <h2>Home Feed</h2>
+
+      <form action="#" method="POST" class="new-post">
+        <label for="new-post">Create a new post:</label>
+        <textarea id="new-post" name="new-post" rows="4" placeholder="What's on your mind?"></textarea>
+        <button type="submit">Post</button>
+      </form>
+
+      <article class="post">
+        <img src="images/aleem.jpg" alt="Aleem Ghafoor-profile-image" class="profile-image" width="50">
+        <p>Aleem Ghafoor</p>
+        <h3>Productive Study Day</h3>
+        <p>Spent the day focusing on my studies and making good progress. Feeling accomplished!</p>
+        <p><small>Posted on: 2026-06-15</small></p>
+        <img src="images/productive-study.jpg" alt="Post Image 1" class="post-image" width="300">
+
+        <footer class="post-footer">
+          <button type="button">Like</button>
+          <button type="button">Comment</button>
+          <button type="button">Share</button>
+        </footer>
+      </article>
+
+      <article class="post">
+        <img src="images/ali-khan.png" alt="Ali Khan-profile-image" class="profile-image" width="50">
+        <p>Ali Khan</p>
+        <h3>Evening Walk</h3>
+        <p>It is relaxing to take breaks sometimes.</p>
+        <p><small>Posted on: 2026-06-14</small></p>
+        <img src="images/evening-walk.jpg" alt="Post Image 2" class="post-image" width="300">
+
+        <footer class="post-footer">
+          <button type="button">Like</button>
+          <button type="button">Comment</button>
+          <button type="button">Share</button>
+        </footer>
+      </article>
+
+      <article class="post">
+        <img src="images/hira-khan.jpg" alt="Hira Khan-profile-image" class="profile-image" width="50">
+        <p>Hira Khan</p>
+        <h3>Weekend Plans</h3>
+        <p>Family are important as much as friends who stays by your side in hard times.</p>
+        <p><small>Posted on: 2026-06-13</small></p>
+        <img src="images/weekends-plan.jpg" alt="Post Image 3" class="post-image" width="300">
+
+        <footer class="post-footer">
+          <button type="button">Like</button>
+          <button type="button">Comment</button>
+          <button type="button">Share</button>
+        </footer>
+      </article>
+    </section>
+
+    <aside class="trending">
+      <div class="suggested-friends">
+        <h3>Suggested Friends</h3>
+        <ul>
+          <li>
+            <a href="profile.html">
+              <img src="images/sehra.jpg" alt="Sehra-profile-image" class="profile-image" width="50">
+              Sehra
+            </a>
+            <button type="button">Add Friend</button>
+          </li>
+          <li>
+            <a href="profile.html">
+              <img src="images/mike-chen.jpg" alt="Mike Chen-profile-image" class="profile-image" width="50">
+              Mike Chen
+            </a>
+            <button type="button">Add Friend</button>
+          </li>
+          <li>
+            <a href="profile.html">
+              <img src="images/emma-davis.jpg" alt="Emma Davis-profile-image" class="profile-image" width="50">
+              Emma Davis
+            </a>
+            <button type="button">Add Friend</button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="friend-requests">
+        <h3>Friend Requests</h3>
+        <ul>
+          <li>
+            <img src="images/john-doe.jpg" alt="John Doe-profile-image" class="profile-image" width="50">
+            <p>John Doe</p>
+            <button type="button">Accept</button> 
+            <button type="button">Decline</button></li>
+          <li>
+            <img src="images/sara-ahmad.png" alt="Sara Ahmad-profile-image" class="profile-image" width="50">
+            <p>Sara Ahmad</p>
+            <button type="button">Accept</button> 
+            <button type="button">Decline</button></li>
+        </ul>
+      </div>
+
+      <div class="trending-topics">
+        <h2>Trending Topics</h2>
+        <ul>
+          <li><a href="#">#WebDevelopment</a></li>
+          <li><a href="#">#StudyRoutine</a></li>
+          <li><a href="#">#TravelDiaries</a></li>
+          <li><a href="#">#FitnessGoals</a></li>
+          <li><a href="#">#FoodLovers</a></li>
+        </ul>
+      </div>
+
+      <div class="upcoming-events">
+        <h2>Upcoming Events</h2>
+        <ul>
+          <li>
+            <h3>Web Design Workshop</h3>
+            <p>Learn basic HTML and CSS layout.</p>
+            <time datetime="2026-07-10">10 July 2026</time>
+          </li>
+
+          <li>
+            <h3>Student Meetup</h3>
+            <p>Meet students and share learning goals.</p>
+            <time datetime="2026-07-15">15 July 2026</time>
+          </li>
+
+          <li>
+            <h3>Fitness Challenge</h3>
+            <p>Join a 7-day healthy routine challenge.</p>
+            <time datetime="2026-07-20">20 July 2026</time>
+          </li>
+        </ul>
+      </div>
+
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 FriendLoop. All rights reserved.</p>
+  </footer>
+
+</body>
+
+</html>
