@@ -722,3 +722,58 @@ body {
     width: 96px;
   }
 }
+
+/* Final phone dotted width fix */
+@media (max-width: 900px) {
+  .header {
+    overflow-x: hidden;
+  }
+
+  .search {
+    max-width: 100%;
+  }
+
+  .search input[type="search"] {
+    max-width: calc(100vw - 120px);
+  }
+
+  .navigation-links {
+    gap: 4px 10px;
+  }
+
+  .navigation-links a {
+    margin: 0 4px;
+    font-size: 0.95em;
+  }
+
+  .trending .dropdown-trending {
+    position: fixed !important;
+    left: 16px !important;
+    right: 16px !important;
+    top: auto !important;
+    bottom: 92px !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: calc(100vw - 32px) !important;
+    max-height: 68vh !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    z-index: 2000 !important;
+  }
+}
+
+@media (max-width: 430px) {
+  .search input[type="search"] {
+    max-width: calc(100vw - 112px);
+    font-size: 0.9em;
+  }
+
+  .search button {
+    padding: 5px 11px;
+    font-size: 0.9em;
+  }
+
+  .navigation-links a {
+    font-size: 0.9em;
+  }
+}
