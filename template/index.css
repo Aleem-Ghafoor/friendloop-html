@@ -514,35 +514,80 @@
   border-top: 1px solid #1E293B;
 }
 
+/* ==============================
+   SMALL LAPTOP
+============================== */
+
+@media (max-width: 1100px) {
+  .home-feed,
+  .users-posts {
+    width: calc(100% - 40px);
+    max-width: 760px;
+  }
+
+  .post-head {
+    width: 100%;
+  }
+
+  .post-image {
+    height: 420px;
+  }
+}
+
+
+/* ==============================
+   TABLET AND PHONE
+============================== */
+
 @media (max-width: 900px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .header {
     position: static;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 12px;
+    width: 100%;
     padding: 16px;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
   }
 
   .header h1 {
     text-align: center;
-    font-size: 2em;
+    font-size: 2rem;
   }
 
   .search {
-    display: flex;
-    justify-content: center;
     width: 100%;
-    margin: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    gap: 8px;
   }
 
   .search input[type="search"] {
-    width: min(100%, 320px);
+    flex: 1;
+    width: auto;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .search button {
+    flex-shrink: 0;
   }
 
   .navigation-links {
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 8px 14px;
+  }
+
+  .navigation-links a {
+    margin: 0;
   }
 
   .main {
@@ -552,125 +597,173 @@
 
   .sidebar {
     position: static;
-    width: min(100% - 32px, 420px);
+    width: min(calc(100% - 32px), 430px);
     height: auto;
-    margin: 0 auto 24px;
+    margin: 0 auto 28px;
+    padding: 22px 18px;
     border-right: none;
     border-radius: 16px;
+    overflow: visible;
   }
 
   .profile-picture {
     display: block;
-    margin: 20px auto;
+    width: 140px;
+    height: 140px;
+    margin: 15px auto 20px;
   }
 
-  .home-feed,
-  .users-posts {
-    width: min(100% - 32px, 720px);
+  .stats {
+    flex-wrap: wrap;
   }
 
-  .plus-btn {
-    right: 0;
-  }
-
-  .trending {
-    top: auto;
-    right: 20px;
-    bottom: 20px;
-  }
-
-  .trending .dropdown-trending {
-    right: 0;
-    min-width: min(90vw, 430px);
-  }
-}
-
-body {
-  overflow-x: hidden;
-}
-
-/* Mobile overflow polish */
-@media (max-width: 900px) {
-  .search {
-    gap: 8px;
-  }
-
-  .search input[type="search"] {
-    width: auto;
+  .stats p {
     flex: 1;
-    min-width: 0;
+    min-width: 90px;
   }
 
-  .search button {
-    flex-shrink: 0;
-  }
-
-  .plus-btn {
-    position: fixed;
-    left: 20px;
-    right: auto;
-    bottom: 20px;
-    z-index: 1001;
-  }
-
-  .plus-btn .dropdown {
-    left: 0;
-    bottom: 72px;
-    min-width: min(86vw, 320px);
-  }
-}
-
-@media (max-width: 520px) {
-  .post-image {
-    height: 260px;
-  }
-
-  .post-footer {
-    gap: 8px;
-  }
-
-  .post-footer button {
-    padding: 9px 10px;
-    font-size: 0.85em;
+  .home-feed {
+    width: min(calc(100% - 32px), 720px);
+    margin: 20px auto;
+    align-items: center;
   }
 
   .home-feed h2 {
-    font-size: 1.6em;
+    margin: 20px auto;
   }
-}
 
-/* Phone dotted menu fix */
-.trending:focus,
-.plus-btn:focus {
-  outline: none;
-}
+  .users-posts {
+    width: min(calc(100% - 32px), 720px);
+    margin: 20px auto;
+  }
 
-.trending:focus-within .dropdown-trending,
-.trending:focus .dropdown-trending,
-.trending:hover .dropdown-trending,
-.plus-btn:focus-within .dropdown,
-.plus-btn:focus .dropdown,
-.plus-btn:hover .dropdown {
-  display: block;
-}
-
-@media (max-width: 900px) {
-  .header {
+  .post-head {
     width: 100%;
   }
 
-  .trending .dropdown-trending {
+  .post-image {
+    height: 380px;
+  }
+
+  .footer {
+    margin-left: 0;
+    padding: 22px 16px 95px;
+  }
+
+  /* Plus button */
+  .plus-btn,
+  .plus-btn:hover,
+  .plus-btn:focus,
+  .plus-btn:focus-within {
     position: fixed;
+    top: auto;
+    left: 18px;
+    right: auto;
+    bottom: 18px;
+    width: 58px;
+    height: 58px;
+    transform: none;
+    outline: none;
+    z-index: 5000;
+  }
+
+  .plus-btn .dropdown {
+    display: none;
+    position: fixed;
+    top: auto;
     left: 14px;
     right: 14px;
-    bottom: 92px;
-    top: auto;
-    min-width: 0;
+    bottom: 90px;
     width: auto;
+    min-width: 0;
     max-width: none;
-    max-height: 70vh;
-    overflow-y: auto;
+    max-height: calc(100dvh - 120px);
     padding: 16px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 5100;
+  }
+
+  .plus-btn:focus .dropdown,
+  .plus-btn:focus-within .dropdown {
+    display: block;
+  }
+
+  /* Dotted trending button */
+  .trending,
+  .trending:hover,
+  .trending:focus,
+  .trending:focus-within {
+    position: fixed;
+    top: auto;
+    left: auto;
+    right: 18px;
+    bottom: 18px;
+    width: 58px;
+    height: 58px;
+    transform: none;
+    outline: none;
+    z-index: 5000;
+  }
+
+  .trending .dropdown-trending {
+    display: none;
+    position: fixed;
+    top: auto;
+    left: 14px;
+    right: 14px;
+    bottom: 90px;
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    max-height: calc(100dvh - 120px);
+    padding: 16px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-align: left;
+    line-height: normal;
+    z-index: 5100;
+  }
+
+  .trending:focus .dropdown-trending,
+  .trending:focus-within .dropdown-trending {
+    display: block;
+  }
+
+  .suggested-friends li,
+  .friend-requests li {
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 5px 10px;
+    align-items: center;
+    margin: 12px 0;
+    padding-right: 10px;
+  }
+
+  .suggested-friends .profile-image,
+  .friend-requests .profile-image {
+    width: 72px;
+    height: 72px;
+    grid-row: 1 / 4;
+    margin: 0;
+  }
+
+  .suggested-friends p,
+  .friend-requests p {
+    grid-column: 2;
+    margin: 0;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
+  .suggested-friends button,
+  .friend-requests button {
+    grid-column: 2;
+    width: 100%;
+    height: 38px;
+    margin: 5px 0 0;
   }
 
   .upcoming-events ul {
@@ -682,98 +775,147 @@ body {
     border-bottom: 2px dotted #14B8A6;
     padding-bottom: 10px;
   }
+}
 
-  .suggested-friends li,
-  .friend-requests li {
-    margin: 12px 0;
+
+/* ==============================
+   TOUCH PHONE DROPDOWN FIX
+============================== */
+
+@media (max-width: 900px) and (hover: none) and (pointer: coarse) {
+  .trending:hover .dropdown-trending,
+  .plus-btn:hover .dropdown {
+    display: none;
   }
 
-  .footer {
-    margin-left: 0;
-    padding: 22px 16px 92px;
+  .trending:focus .dropdown-trending,
+  .trending:focus-within .dropdown-trending,
+  .plus-btn:focus .dropdown,
+  .plus-btn:focus-within .dropdown {
+    display: block;
   }
 }
 
-/* Home dropdown mobile button alignment */
-@media (max-width: 900px) {
-  .friend-requests li {
-    display: grid;
-    grid-template-columns: 80px 1fr 80px;
-    gap: 8px;
-    align-items: center;
-    padding-right: 10px;
-  }
 
-  .friend-requests li .profile-image {
-    grid-row: 1 / 3;
-  }
+/* ==============================
+   MOBILE
+============================== */
 
-  .friend-requests p {
-    margin-left: 0;
-  }
-
-  .friend-requests button {
-    width: 78px;
-    margin: 0;
-    font-size: 0.82em;
-  }
-
-  .suggested-friends button {
-    width: 96px;
-  }
-}
-
-/* Final phone dotted width fix */
-@media (max-width: 900px) {
+@media (max-width: 600px) {
   .header {
-    overflow-x: hidden;
+    padding: 14px 12px;
   }
 
-  .search {
-    max-width: 100%;
-  }
-
-  .search input[type="search"] {
-    max-width: calc(100vw - 120px);
+  .header h1 {
+    font-size: 1.75rem;
   }
 
   .navigation-links {
-    gap: 4px 10px;
+    gap: 6px 10px;
   }
 
   .navigation-links a {
-    margin: 0 4px;
-    font-size: 0.95em;
+    font-size: 0.92rem;
   }
 
-  .trending .dropdown-trending {
-    position: fixed !important;
-    left: 16px !important;
-    right: 16px !important;
-    top: auto !important;
-    bottom: 92px !important;
-    width: auto !important;
-    min-width: 0 !important;
-    max-width: calc(100vw - 32px) !important;
-    max-height: 68vh !important;
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
-    z-index: 2000 !important;
+  .sidebar {
+    width: calc(100% - 24px);
+    padding: 18px 14px;
+  }
+
+  .home-feed,
+  .users-posts {
+    width: calc(100% - 24px);
+  }
+
+  .home-feed h2 {
+    font-size: 1.55rem;
+  }
+
+  .post {
+    padding: 14px;
+  }
+
+  .post-image {
+    height: 280px;
+  }
+
+  .post-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px;
+  }
+
+  .post-footer button {
+    width: 100%;
+    padding: 9px 5px;
+    font-size: 0.8rem;
   }
 }
 
+
+/* ==============================
+   SMALL MOBILE
+============================== */
+
 @media (max-width: 430px) {
+  .header h1 {
+    font-size: 1.55rem;
+  }
+
   .search input[type="search"] {
-    max-width: calc(100vw - 112px);
-    font-size: 0.9em;
+    font-size: 0.88rem;
+    padding: 8px;
   }
 
   .search button {
-    padding: 5px 11px;
-    font-size: 0.9em;
+    padding: 7px 10px;
+    font-size: 0.85rem;
   }
 
-  .navigation-links a {
-    font-size: 0.9em;
+  .profile-picture {
+    width: 120px;
+    height: 120px;
+  }
+
+  .post-image {
+    height: 230px;
+  }
+
+  .post-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .post-footer button {
+    font-size: 0.9rem;
+  }
+
+  .plus-btn,
+  .plus-btn:hover,
+  .plus-btn:focus,
+  .plus-btn:focus-within {
+    left: 14px;
+    bottom: 14px;
+    width: 54px;
+    height: 54px;
+  }
+
+  .trending,
+  .trending:hover,
+  .trending:focus,
+  .trending:focus-within {
+    right: 14px;
+    bottom: 14px;
+    width: 54px;
+    height: 54px;
+  }
+
+  .plus-btn .dropdown,
+  .trending .dropdown-trending {
+    left: 10px;
+    right: 10px;
+    bottom: 78px;
+    max-height: calc(100dvh - 105px);
+    padding: 14px;
   }
 }
