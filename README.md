@@ -1,36 +1,51 @@
 ﻿# FriendLoop
 
-FriendLoop is a beginner-friendly HTML social media project. It is built as part of an HTML practice roadmap and focuses on clean page structure, semantic tags, forms, navigation, images, posts, profile content, and discovery sections.
+FriendLoop is a beginner-friendly social media website built with HTML and CSS. It was created as part of an HTML/CSS learning roadmap and practices semantic page structure, multi-page navigation, forms, responsive layouts, cards, profile content, posts, and discovery sections.
 
-## Pages
+## Live Pages
 
-- `auth.html` - Login page with email and password fields.
-- `index.html` - Home feed with user sidebar, posts, suggested friends, friend requests, trending topics, and events.
-- `explore.html` - Explore page with trending topics, popular posts, discover friends, categories, hashtags, communities, and events.
-- `profile.html` - User profile page with bio, stats, about section, suggested friends, and user posts.
+- `auth.html` - Login page with a responsive card layout.
+- `index.html` - Home feed with fixed sidebar, posts, quick profile stats, floating create-post button, and discovery menu.
+- `explore.html` - Explore page with popular posts first, then trending topics, discover friends, categories, hashtags, communities, and events.
+- `profile.html` - Personal profile page with profile info, stats, bio/about section, friend suggestions, and personal posts.
 
-## Features Practiced
+## Features
 
-- Semantic HTML layout using `header`, `nav`, `main`, `section`, `article`, `aside`, and `footer`
-- Forms with labels, inputs, textarea, buttons, and required fields
-- Navigation between multiple pages
-- Images with meaningful `alt` text
-- Lists for topics, categories, friends, communities, and events
-- Date markup using the `time` element
-- Basic accessibility with `aria-label` on navigation
+- Responsive design for desktop, tablet, and mobile screens
+- Shared header/navigation styling
+- Semantic HTML using `header`, `nav`, `main`, `section`, `article`, `aside`, `footer`, and `time`
+- Accessible form labels and meaningful image `alt` text
+- Login form with email/password fields
+- Home feed with user posts and lazy-loaded images
+- Explore page with public discovery content
+- Profile page with personal posts and mobile horizontal post carousel
+- Separate CSS files for each page
+
+## Technologies Used
+
+- HTML5
+- CSS3
+- Responsive media queries
+- Git and GitHub
 
 ## Folder Structure
 
 ```text
-FriendLoop/
+friendloop-html/
 ├── auth.html
 ├── index.html
 ├── explore.html
 ├── profile.html
 ├── README.md
-└── images/
+├── images/
+└── template/
+    ├── auth.css
+    ├── explore.css
+    ├── header.css
+    ├── index.css
+    └── profile.css
 ```
 
-## Note
+## Learning Goals
 
-This project is currently HTML-only. CSS and JavaScript can be added later to improve design, responsiveness, and interactivity.
+This project practices CSS fundamentals including selectors, colors, spacing, cards, fixed positioning, hover states, responsive breakpoints, and page-specific styling while keeping HTML structure clean and readable.

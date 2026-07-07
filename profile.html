@@ -5,13 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Profile - FriendLoop</title>
+  <link rel="stylesheet" href="template/profile.css">
+  <link rel="stylesheet" href="template/header.css">
 </head>
 
 <body>
 
   <header class="header">
     <h1>FriendLoop</h1>
-    <p>View your profile, posts, friends, and personal details.</p>
 
     <nav aria-label="main navigation" class="navigation-links">
       <a href="index.html">Home</a>
@@ -21,78 +22,129 @@
     </nav>
   </header>
 
-  <main>
+  <main class="main">
     <section class="profile">
-      <h2>Profile</h2>
-      <img src="images/aleem.jpg" alt="Profile Picture" class="profile-picture" width="200">
+      <img src="images/aleem.jpg" alt="Profile Picture" class="profile-picture">
       <h3>Aleem Ghafoor</h3>
-      <p>Software Developer | Web Enthusiast | Lifelong Learner</p>
-
-      <div class="bio">
-        <h4>Bio:</h4>
-        <p>I am a software developer passionate about creating innovative web applications. I enjoy learning new
-          technologies and sharing my knowledge with the community.</p>
-      </div>
+      <p id="skills"><small>Software Developer | Web Enthusiast | Lifelong Learner</small></p>
 
       <div class="stats">
-        <p>Posts: 15</p>
-        <p>Followers: 128</p>
-        <p>Following: 42</p>
+        <p><span class="s1">Posts</span> <span class="s1">15</span></p>
+        <p><span class="s1">Followers</span> <span class="s1">128</span></p>
+        <p><span class="s1">Following</span> <span class="s1">42</span></p>
       </div>
 
-      <div class="about">
-        <h4>About Me:</h4>
-        <p>I love coding, exploring new frameworks, and contributing to open-source projects. In my free time, I enjoy
-          reading tech blogs, hiking, and playing chess.</p>
-        <p>Education: Bachelor of Science in Computer Science</p>
-        <p>Location: Lahore, Pakistan</p>
+      <div class="bio-about">
+        <div class="bio d1">
+          <h4>Bio:</h4>
+          <p>I am a software developer passionate about creating innovative web applications. I enjoy learning new
+            technologies and sharing my knowledge with the community.</p>
+        </div>
+
+        <div class="about d1">
+          <h4>About Me:</h4>
+          <p>I love coding, exploring new frameworks, and contributing to open-source projects. In my free time, I enjoy
+            reading tech blogs, hiking, and playing chess.</p>
+          <p><strong>Education:</strong> Bachelor of Science in Software Engineering</p>
+          <p><strong>Location:</strong> Lahore, Pakistan</p>
+        </div>
       </div>
 
-      <div class="Friends">
+      <div class="friends">
         <h4>Friends you may know</h4>
         <ul>
           <li>
             <a href="#">
-              <img src="images/ali-khan.png" alt="Ali Khan-profile-image" class="profile-image" width="50">
-              Ali Khan
+              <img src="images/ali-khan.png" alt="Ali Khan-profile-image" class="profile-image">
             </a>
-            <p>I am a software developer with a passion for creating innovative web applications.</p>
+            <p class="name">Ali Khan</p>
+            <p class="p1">I am a software developer with a passion for creating innovative web applications.</p>
             <button type="button">Follow</button>
           </li>
           <li>
             <a href="#">
-              <img src="images/hira-khan.jpg" alt="Hira Khan-profile-image" class="profile-image" width="50">
-              Hira Khan
+              <img src="images/hira-khan.jpg" alt="Hira Khan-profile-image" class="profile-image">
             </a>
-            <p>I am a graphic designer with a keen eye for detail and a love for creative projects.</p>
+            <p class="name">Hira Khan</p>
+            <p class="p1">I am a graphic designer with a keen eye for detail and a love for creative projects.</p>
             <button type="button">Follow</button>
           </li>
           <li>
             <a href="#">
-              <img src="images/sara-ahmad.png" alt="Sara Ahmed-profile-image" class="profile-image" width="50">
-              Sara Ahmed
+              <img src="images/sara-ahmad.png" alt="Sara Ahmed-profile-image" class="profile-image">
             </a>
-            <p>I am a content writer who enjoys crafting engaging stories and articles for diverse audiences.</p>
+            <p class="name">Sara Ahmed</p>
+            <p class="p1">I am a content writer who enjoys crafting engaging stories and articles for diverse audiences.
+            </p>
             <button type="button">Follow</button>
           </li>
         </ul>
 
       </div>
+      
       <div class="posts">
         <h4>Posts</h4>
-        <article class="post">
-          <h5>Productive Study Day</h5>
-          <p>Spent the day focusing on my studies and making good progress. Feeling accomplished!</p>
-          <p><small>Posted on: 2026-06-15</small></p>
-          <img src="images/productive-study.jpg" alt="Post Image 1" class="post-image" width="300">
-        </article>
-      </div>
+                        <div class="post-head">
+          <article class="post" id="post-1">
+            <h5>My Learning Desk</h5>
+            <p>Set up my study desk and planned today's HTML and CSS practice goals.</p>
+            <p><small>Posted on: 2026-06-16</small></p>
+            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=900&h=600&fit=crop" alt="Clean study desk setup" class="post-image" width="300" loading="lazy">
+
+            <footer class="post-footer">
+              <button type="button">Like</button>
+              <button type="button">Comment</button>
+              <button type="button">Share</button>
+            </footer>
+          </article>
+
+          <article class="post" id="post-2">
+            <h5>CSS Practice</h5>
+            <p>Practiced colors, spacing, buttons, and responsive layout for my FriendLoop project.</p>
+            <p><small>Posted on: 2026-06-15</small></p>
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=900&h=600&fit=crop" alt="Code editor on a laptop screen" class="post-image" width="300" loading="lazy">
+
+            <footer class="post-footer">
+              <button type="button">Like</button>
+              <button type="button">Comment</button>
+              <button type="button">Share</button>
+            </footer>
+          </article>
+
+          <article class="post" id="post-3">
+            <h5>Daily Notes</h5>
+            <p>Wrote down important HTML tags and CSS rules so I can revise them later easily.</p>
+            <p><small>Posted on: 2026-06-14</small></p>
+            <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?w=900&h=600&fit=crop" alt="Notebook with handwritten study notes" class="post-image" width="300" loading="lazy">
+
+            <footer class="post-footer">
+              <button type="button">Like</button>
+              <button type="button">Comment</button>
+              <button type="button">Share</button>
+            </footer>
+          </article>
+
+          <article class="post" id="post-4">
+            <h5>Project Planning</h5>
+            <p>Planned the next improvements for profile, explore, and home pages before pushing to GitHub.</p>
+            <p><small>Posted on: 2026-06-13</small></p>
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&h=600&fit=crop" alt="Project planning notes on a desk" class="post-image" width="300" loading="lazy">
+
+            <footer class="post-footer">
+              <button type="button">Like</button>
+              <button type="button">Comment</button>
+              <button type="button">Share</button>
+            </footer>
+          </article>
+        </div>      </div>
     </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <p>&copy; 2026 FriendLoop. All rights reserved.</p>
   </footer>
 
 </body>
+
 </html>
+

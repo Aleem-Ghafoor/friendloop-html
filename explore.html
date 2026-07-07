@@ -5,16 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Explore - FriendLoop</title>
+  <link rel="stylesheet" href="template/explore.css">
+  <link rel="stylesheet" href="template/header.css">
 </head>
 
 <body>
 
   <header class="header">
     <h1>FriendLoop</h1>
-    <p>Discover trending topics, popular posts, and new people to connect with.</p>
 
     <form action="#" method="GET" class="search">
-      <label for="search">Search:</label>
       <input type="search" id="search" name="search" placeholder="Search for friends, posts, or topics">
       <button type="submit">Search</button>
     </form>
@@ -27,7 +27,7 @@
     </nav>
   </header>
 
-  <main>
+  <main class="main">
     <section class="explore">
 
       <div class="explore-intro">
@@ -35,191 +35,225 @@
         <p>Here you can explore trending topics, popular posts, and discover new friends to connect with.</p>
       </div>
 
-      <div class="trending-topics">
-        <h3>Trending Topics</h3>
-        <ol>
-          <li><a href="#">#DailyLearning</a></li>
-          <li><a href="#">#FitnessGoals</a></li>
-          <li><a href="#">#FoodLovers</a></li>
-          <li><a href="#">#TravelDiaries</a></li>
-          <li><a href="#">#CodingJourney</a></li>
-        </ol>
-      </div>
+      <section class="topic-post">
 
-      <section class="popular-posts">
-        <h3>Popular Posts</h3>
-        <article class="post">
-          <a href="#">
-            <img src="images/ali-khan.png" alt="Ali Khan-profile-image" class="profile-image" width="50">
-          </a>
-          <p>Ali Khan: Learning web development and sharing daily coding progress.</p>
-          <small>Posted on: 2026-06-15</small>
-          <img src="images/ali-khan-post.png" alt="coding progress(ali-khan-post)" class="post-image" width="300">
-          <p>likes: 15 comments: 3 share: 2</p>
-        </article>
-        <article class="post">
-          <a href="#">
-            <img src="images/sara-ahmad.png" alt="Sara Ahmad-profile-image" class="profile-image" width="50">
-          </a>
-          <p>Sara Ahmad: Exploring new places and capturing beautiful moments.</p>
-          <small>Posted on: 2026-06-14</small>
-          <img src="images/sara-ahmad-post.png" alt="road trip(sara-ahmad-post)" class="post-image" width="300">
-          <p>likes: 25 comments: 7 share: 5</p>
-        </article>
-        <article class="post">
-          <a href="#">
-            <img src="images/usman-raza.png" alt="Usman Raza-profile-image" class="profile-image" width="50">
-          </a>
-          <p>Usman Raza: Sharing simple workout tips and healthy habits.</p>
-          <small>Posted on: 2026-06-13</small>
-          <img src="images/usman-raza-post.png" alt="GYM Session(usman-raza-post)" class="post-image" width="300">
-          <p>likes: 30 comments: 10 share: 8</p>
-        </article>
+        <div id="side-bar">
+
+          <aside class="trending-topics">
+            <h3>Trending Topics</h3>
+            <ul>
+              <li><a href="#">#DailyLearning</a></li>
+              <li><a href="#">#FitnessGoals</a></li>
+              <li><a href="#">#FoodLovers</a></li>
+              <li><a href="#">#TravelDiaries</a></li>
+              <li><a href="#">#CodingJourney</a></li>
+            </ul>
+          </aside>
+
+          <section class="discover-friends">
+            <h3>Discover Friends</h3>
+            <article class="friend-suggestions">
+              <a href="#">
+                <img src="images/john-doe.jpg" alt="John Doe-profile-image" class="profile-image" width="50">
+              </a>
+              <p class="name">John Doe</p>
+              <p>Software Engineer</p>
+              <button type="button">Add Friend</button>
+            </article>
+            <article class="friend-suggestions">
+              <a href="#">
+                <img src="images/hira-khan.jpg" alt="Hira Khan-profile-image" class="profile-image" width="50">
+              </a>
+              <p class="name">Hira Khan</p>
+              <p>UX Designer</p>
+              <button type="button">Add Friend</button>
+            </article>
+            <article class="friend-suggestions">
+              <a href="#">
+                <img src="images/bilal-ahmad.jpg" alt="Bilal Ahmad-profile-image" class="profile-image" width="50">
+              </a>
+              <p class="name">Bilal Ahmad</p>
+              <p>Fitness coach</p>
+              <button type="button">Add Friend</button>
+            </article>
+          </section>
+
+          <article class="categories">
+            <h3>Categories</h3>
+            <ol>
+              <li><a href="#">Education</a></li>
+              <li><a href="#">Travel</a></li>
+              <li><a href="#">Fitness</a></li>
+              <li><a href="#">Lifestyle</a></li>
+              <li><a href="#">Technology</a></li>
+              <li><a href="#">Web Development</a></li>
+            </ol>
+          </article>
+
+        </div>
+
+        <section class="popular-posts">
+          <h3>Popular Posts</h3>
+          <article class="post">
+            <div class="post-head">
+              <a href="#">
+                <img src="images/ali-khan.png" alt="Ali Khan-profile-image" class="profile-image" width="50">
+              </a>
+              <p>Ali Khan </p>
+            </div>
+            <p>Learning web development and sharing daily coding progress.</p>
+            <p><small>Posted on: 2026-06-15</small></p>
+            <img src="images/ali-khan-post.png" alt="coding progress(ali-khan-post)" class="post-image" width="300">
+            <footer class="post-footer">
+              <button type="button">Like ❤ 15</button>
+              <button type="button">Comment 💭 6</button>
+              <button type="button">Share 🕊️ 2</button>
+            </footer>
+          </article>
+          <article class="post">
+            <div class="post-head">
+              <a href="#">
+                <img src="images/sara-ahmad.png" alt="Sara Ahmad-profile-image" class="profile-image" width="50">
+              </a>
+              <p>Sara Ahmad</p>
+            </div>
+            <p>Exploring new places and capturing beautiful moments.</p>
+            <p><small>Posted on: 2026-06-14</small></p>
+            <img src="images/sara-ahmad-post.png" alt="road trip(sara-ahmad-post)" class="post-image" width="300">
+
+            <footer class="post-footer">
+              <button type="button">Like ❤ 12</button>
+              <button type="button">Comment 💭 4</button>
+              <button type="button">Share 🕊️ 2</button>
+            </footer>
+          </article>
+          <article class="post">
+            <div class="post-head">
+              <a href="#">
+                <img src="images/usman-raza.png" alt="Usman Raza-profile-image" class="profile-image" width="50">
+              </a>
+              <p>Usman Raza</p>
+            </div>
+            <p>Sharing simple workout tips and healthy habits.</p>
+            <p><small>Posted on: 2026-06-13</small></p>
+            <img src="images/usman-raza-post.png" alt="GYM Session(usman-raza-post)" class="post-image" width="300">
+            <footer class="post-footer">
+              <button type="button">Like ❤ 30</button>
+              <button type="button">Comment 💭 10</button>
+              <button type="button">Share 🕊️ 8</button>
+            </footer>
+          </article>
+        </section>
       </section>
-
-      <section class="discover-friends">
-        <h3>Discover Friends</h3>
-        <article class="friend-suggestions">
-          <a href="#">
-            <img src="images/john-doe.jpg" alt="John Doe-profile-image" class="profile-image" width="50">
-          </a>
-          <p>John Doe</p>
-          <p>Software Engineer</p>
-          <button type="button">Add Friend</button>
-        </article>
-        <article class="friend-suggestions">
-          <a href="#">
-            <img src="images/hira-khan.jpg" alt="Hira Khan-profile-image" class="profile-image" width="50">
-          </a>
-          <p>Hira Khan</p>
-          <p>UX Designer</p>
-          <button type="button">Add Friend</button>
-        </article>
-        <article class="friend-suggestions">
-          <a href="#">
-            <img src="images/bilal-ahmad.jpg" alt="Bilal Ahmad-profile-image" class="profile-image" width="50">
-          </a>
-          <p>Bilal Ahmad</p>
-          <p>Fitness coach</p>
-          <button type="button">Add Friend</button>
-        </article>
-      </section>
-
-      <article class="categories">
-        <h3>Categories</h3>
-        <ol>
-          <li><a href="#">Education</a></li>
-          <li><a href="#">Travel</a></li>
-          <li><a href="#">Fitness</a></li>
-          <li><a href="#">Lifestyle</a></li>
-          <li><a href="#">Technology</a></li>
-          <li><a href="#">Web Development</a></li>
-        </ol>
-      </article>
-
 
       <aside class="extra-discovery-info">
-        <div class="top-hashtags">
-          <h3>Top Hashtags</h3>
-          <ul>
-            <li><a href="#">#WebDevelopment</a></li>
-            <li><a href="#">#StudyRoutine</a></li>
-            <li><a href="#">#TravelDiaries</a></li>
-            <li><a href="#">#FitnessGoals</a></li>
-            <li><a href="#">#FoodLovers</a></li>
-          </ul>
+
+        <p id="dot">...</p>
+
+        <div class="dropdown-extra-discovery-info">
+
+          <div class="people-might-know">
+            <h3>People You Might Know</h3>
+            <ul>
+              <li>
+                <a href="#">
+                  <img src="images/hela.jpg" alt="Hela-profile-image" class="profile-image" width="50">
+                </a>
+                <p class="name">Hela</p>
+                <p>Product Manager</p>
+                <button type="button">Add Friend</button>
+              </li>
+
+              <li>
+                <a href="#">
+                  <img src="images/wilam.jpg" alt="Wilam-profile-image" class="profile-image" width="50">
+                </a>
+                <p class="name">Wilam</p>
+                <p>Data Scientist</p>
+                <button type="button">Add Friend</button>
+              </li>
+
+              <li>
+                <a href="#">
+                  <img src="images/sehra.jpg" alt="Sehra-profile-image" class="profile-image" width="50">
+                </a>
+                <p class="name">Sehra</p>
+                <p>DevOps Engineer</p>
+                <button type="button">Add Friend</button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="top-hashtags">
+            <h3>Top Hashtags</h3>
+            <ul>
+              <li><a href="#">#WebDevelopment</a></li>
+              <li><a href="#">#StudyRoutine</a></li>
+              <li><a href="#">#TravelDiaries</a></li>
+              <li><a href="#">#FitnessGoals</a></li>
+              <li><a href="#">#FoodLovers</a></li>
+            </ul>
+          </div>
+
+          <div class="active-communities">
+            <h3>Active Communities</h3>
+            <ul>
+              <li>
+                <h4>Web Developers:</h4>
+                <p>Build websites</p>
+              </li>
+
+              <li>
+                <h4>Student Circle:</h4>
+                <p>Study together</p>
+              </li>
+
+              <li>
+                <h4>Travel Lovers:</h4>
+                <p>Explore places</p>
+              </li>
+
+              <li>
+                <h4>Fitness Club:</h4>
+                <p>Stay healthy</p>
+              </li>
+
+              <li>
+                <h4>Food Explorers:</h4>
+                <p>Try recipes</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="upcoming-events">
+            <h3>Upcoming Events</h3>
+            <ul>
+              <li>
+                <h4>Web Design Workshop</h4>
+                <p>Learn basic HTML and CSS layout.</p>
+                <time datetime="2026-07-10">10 July 2026</time>
+              </li>
+
+              <li>
+                <h4>Student Meetup</h4>
+                <p>Meet students and share learning goals.</p>
+                <time datetime="2026-07-15">15 July 2026</time>
+              </li>
+
+              <li>
+                <h4>Fitness Challenge</h4>
+                <p>Join a 7-day healthy routine challenge.</p>
+                <time datetime="2026-07-20">20 July 2026</time>
+              </li>
+            </ul>
+          </div>
+
         </div>
-
-        <div class="people-might-know">
-          <h3>People You Might Know</h3>
-          <ul>
-            <li>
-              <a href="#">
-                <img src="images/hela.jpg" alt="Hela-profile-image" class="profile-image" width="50">
-              </a>
-              <p>Hela</p>
-              <p>Product Manager</p>
-              <button type="button">Add Friend</button>
-            </li>
-
-            <li>
-              <a href="#">
-                <img src="images/wilam.jpg" alt="Wilam-profile-image" class="profile-image" width="50">
-              </a>
-              <p>Wilam</p>
-              <p>Data Scientist</p>
-              <button type="button">Add Friend</button>
-            </li>
-
-            <li>
-              <a href="#">
-                <img src="images/sehra.jpg" alt="Sehra-profile-image" class="profile-image" width="50">
-              </a>
-              <p>Sehra</p>
-              <p>DevOps Engineer</p>
-              <button type="button">Add Friend</button>
-            </li>
-          </ul>
-        </div>
-
-        <div class="active-communities">
-          <h3>Active Communities</h3>
-          <ul>
-            <li>
-              <h3>Web Developers</h3>
-              <p>Build websites</p>
-            </li>
-
-            <li>
-              <h3>Student Circle</h3>
-              <p>Study together</p>
-            </li>
-
-            <li>
-              <h3>Travel Lovers</h3>
-              <p>Explore places</p>
-            </li>
-
-            <li>
-              <h3>Fitness Club</h3>
-              <p>Stay healthy</p>
-            </li>
-
-            <li>
-              <h3>Food Explorers</h3>
-              <p>Try recipes</p>
-            </li>
-          </ul>
-        </div>
-
-        <div class="upcoming-events">
-          <h3>Upcoming Events</h3>
-          <ul>
-            <li>
-              <h3>Web Design Workshop</h3>
-              <p>Learn basic HTML and CSS layout.</p>
-              <time datetime="2026-07-10">10 July 2026</time>
-            </li>
-
-            <li>
-              <h3>Student Meetup</h3>
-              <p>Meet students and share learning goals.</p>
-              <time datetime="2026-07-15">15 July 2026</time>
-            </li>
-
-            <li>
-              <h3>Fitness Challenge</h3>
-              <p>Join a 7-day healthy routine challenge.</p>
-              <time datetime="2026-07-20">20 July 2026</time>
-            </li>
-          </ul>
-        </div>
-
       </aside>
     </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <p>&copy; 2026 FriendLoop. All rights reserved.</p>
   </footer>
 </body>
