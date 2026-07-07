@@ -724,3 +724,71 @@ body {
     order: 2;
   }
 }
+
+/* Explore phone dotted fit fix */
+.extra-discovery-info:focus {
+  outline: none;
+}
+
+.extra-discovery-info:focus-within .dropdown-extra-discovery-info,
+.extra-discovery-info:focus .dropdown-extra-discovery-info,
+.extra-discovery-info:hover .dropdown-extra-discovery-info {
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .extra-discovery-info .dropdown-extra-discovery-info {
+    position: fixed;
+    left: 14px;
+    right: 14px;
+    bottom: 92px;
+    top: auto;
+    min-width: 0;
+    width: auto;
+    max-width: none;
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: 16px;
+  }
+
+  .people-might-know li,
+  .friend-suggestions {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 4px 10px;
+    align-items: center;
+    padding-right: 10px;
+  }
+
+  .people-might-know li button,
+  .friend-suggestions button {
+    grid-column: 2;
+    width: 100%;
+    margin: 6px 0 0;
+  }
+
+  .active-communities li:hover {
+    transform: none;
+  }
+}
+
+/* Explore dropdown card alignment fix */
+@media (max-width: 900px) {
+  .people-might-know li .profile-image,
+  .friend-suggestions .profile-image {
+    grid-row: 1 / 4;
+  }
+
+  .people-might-know li p,
+  .friend-suggestions p {
+    grid-column: 2;
+    margin: 0;
+    line-height: 1.35;
+    word-break: normal;
+  }
+
+  .people-might-know li .name,
+  .friend-suggestions .name {
+    font-size: 1.1em;
+  }
+}

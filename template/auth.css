@@ -224,3 +224,27 @@ body {
     height: 42px;
   }
 }
+
+/* Footer bottom fix */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  margin-top: auto;
+}
+
+@media (max-width: 480px) {
+  main {
+    align-items: flex-start;
+  }
+}

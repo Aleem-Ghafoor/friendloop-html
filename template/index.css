@@ -638,3 +638,87 @@ body {
     font-size: 1.6em;
   }
 }
+
+/* Phone dotted menu fix */
+.trending:focus,
+.plus-btn:focus {
+  outline: none;
+}
+
+.trending:focus-within .dropdown-trending,
+.trending:focus .dropdown-trending,
+.trending:hover .dropdown-trending,
+.plus-btn:focus-within .dropdown,
+.plus-btn:focus .dropdown,
+.plus-btn:hover .dropdown {
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .header {
+    width: 100%;
+  }
+
+  .trending .dropdown-trending {
+    position: fixed;
+    left: 14px;
+    right: 14px;
+    bottom: 92px;
+    top: auto;
+    min-width: 0;
+    width: auto;
+    max-width: none;
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: 16px;
+  }
+
+  .upcoming-events ul {
+    flex-direction: column;
+  }
+
+  .upcoming-events li {
+    border-right: none;
+    border-bottom: 2px dotted #14B8A6;
+    padding-bottom: 10px;
+  }
+
+  .suggested-friends li,
+  .friend-requests li {
+    margin: 12px 0;
+  }
+
+  .footer {
+    margin-left: 0;
+    padding: 22px 16px 92px;
+  }
+}
+
+/* Home dropdown mobile button alignment */
+@media (max-width: 900px) {
+  .friend-requests li {
+    display: grid;
+    grid-template-columns: 80px 1fr 80px;
+    gap: 8px;
+    align-items: center;
+    padding-right: 10px;
+  }
+
+  .friend-requests li .profile-image {
+    grid-row: 1 / 3;
+  }
+
+  .friend-requests p {
+    margin-left: 0;
+  }
+
+  .friend-requests button {
+    width: 78px;
+    margin: 0;
+    font-size: 0.82em;
+  }
+
+  .suggested-friends button {
+    width: 96px;
+  }
+}
